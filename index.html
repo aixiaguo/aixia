@@ -1,37 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
     <style>
-        /* Add some basic styling */
+        /* Basic styling for the layout */
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
         }
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
+        /* Header styles */
+        header {
+            background-color: #333;
             color: white;
-            padding: 15px 32px;
+            padding: 10px;
             text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
         }
-        .button:hover {
-            background-color: #45a049;
+        /* Navigation styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        /* Main content styles */
+        .container {
+            display: flex;
+            flex-grow: 1;
+        }
+        .left-column {
+            width: 30%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .right-column {
+            width: 70%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Personal Website</h1>
-    <p>Explore different sections by clicking the buttons below:</p>
-    <a href="about.html" class="button">About Me</a>
-    <a href="portfolio.html" class="button">Portfolio</a>
-    <a href="contact.html" class="button">Contact</a>
+    <!-- Header section -->
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    
+    <!-- Navigation links at the top -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main container with two columns -->
+    <div class="container">
+        <!-- Left column with personal info -->
+        <div class="left-column">
+            <img src="profile.jpg" alt="Profile Picture" style="width:100%; border-radius: 50%;">
+            <h2>John Doe</h2>
+            <p>Email: johndoe@example.com</p>
+            <p>Phone: +123-456-7890</p>
+            <!-- Add more personal info here -->
+        </div>
+        
+        <!-- Right column with text content -->
+        <div class="right-column">
+            <h2>About Me</h2>
+            <p>This is the text content area where you can write about yourself, your projects, or any other content you want to display on your personal website.</p>
+            <!-- Add more content here -->
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+    </footer>
 </body>
 </html>
